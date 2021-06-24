@@ -33,3 +33,53 @@ else:
         print("SECOND not OK")
 
 ```
+
+FOR loop:
+
+```
+x = ["shiv", "hanu"]
+for i in x:
+    print(i)
+```
+
+
+methods
+
+```
+print("Enter your Name: ") 
+res = input()
+print("Your name is : " + res.capitalize())
+```
+
+Bytes:
+
+```
+>>> d = b'this is bytes'
+>>> d.split()
+[b'this', b'is', b'bytes']
+>>> d[0]
+116
+
+>>> ak = "Hi this is utf8"
+>>> data = ak.encode('utf8')
+>>> print(data)
+b'Hi this is utf8'
+>>> 
+>>> ak = data.decode('utf8')
+>>> print(ak)
+Hi this is utf8
+```
+
+LIST:
+
+```
+LST = [1,2,3]
+LST1 = []
+```
+
+DICT:
+
+```
+DCT: {'KEY1': 'VAL1', 'KEY2':'VAL2'}
+DCT2 = {}
+```
