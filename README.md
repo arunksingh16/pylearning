@@ -1,4 +1,16 @@
 
+## PIP UPDATES
+
+```
+pip list --outdated
+
+pip install <package_name> --upgrade
+
+# FOR SPECIFIC USER
+pip install <package_name> --upgrade --user
+
+```
+
 ## PYTHON EXAMPLES
 
 Raw string: 
@@ -98,5 +110,20 @@ function_example.method1()
 ```
 from function_example import *
 method1()
+
+```
+
+function with default argument: Arg with default values must come after those without default values
+
+```
+import time
+def createbanner(msg, border="-"):
+    l = border * len(msg)
+    print(l)
+    print(msg)
+    print(l) 
+
+createbanner("This is Banner")
+createbanner(time.ctime(), "$")
 
 ```
