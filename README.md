@@ -83,3 +83,20 @@ DICT:
 DCT: {'KEY1': 'VAL1', 'KEY2':'VAL2'}
 DCT2 = {}
 ```
+
+Importing a function:
+
+1. file with a function
+```
+import function_example
+
+function_example.method1()
+
+```
+2. calling directly a function
+
+```
+from function_example import *
+method1()
+
+```
