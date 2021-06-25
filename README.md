@@ -163,3 +163,26 @@ createbanner(time.ctime(), "$")
 ```
 
 enumerate 
+
+
+
+
+
+Very bad
+```
+from modu import *
+[...]
+x = sqrt(4)  # Is sqrt part of modu? A builtin? Defined above?
+````
+Better
+```
+from modu import sqrt
+[...]
+x = sqrt(4)  # sqrt may be part of modu, if not redefined in between
+```
+Best
+```
+import modu
+[...]
+x = modu.sqrt(4)  # sqrt is visibly part of modu's namespace
+```
