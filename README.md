@@ -13,7 +13,7 @@ pip install <package_name> --upgrade --user
 ## PYTHON TIPS
 
 - All functions return a value, if you dont specify then it is none.
-
+- Mutable
 
 
 ## PYTHON EXAMPLES
