@@ -12,8 +12,10 @@ pip install <package_name> --upgrade --user
 ```
 ## PYTHON TIPS
 
-- All functions return a value, if you dont specify then it is none.
+- All functions return a value, if you dont specify then it is none. functions are first-class objects.
 - Mutable
+- Any directory with an __init__.py file is considered a Python package. A file modu.py in the directory pack/ is imported with thestatement import pack.modu.
+- 
 
 
 ## PYTHON EXAMPLES
@@ -168,9 +170,11 @@ createbanner(time.ctime(), "$")
 ```
 
 enumerate 
-
-
-
+```
+a = ["icky", "icky", "icky", "p-tang"]
+for i, item in enumerate(a):
+    print("{i}: {item}".format(i=i, item=item))
+```
 
 
 Very bad
@@ -191,3 +195,19 @@ import modu
 [...]
 x = modu.sqrt(4)  # sqrt is visibly part of modu's namespace
 ```
+
+
+## Practises
+
+Use PEP8 code style guide for Python
+```
+pip install pep8
+python -m pep8 <py file>
+
+```
+
+`dir(object)` returns a list of attributesthat are accessible via the object
+`globals()` returns a dictionary of the attributescurrently in the global namespace, along with their values.
+`locals()` returns a dictionary of the attributes inthe current local namespace (e.g., within a function),along with their values.
+
+
