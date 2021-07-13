@@ -12,5 +12,18 @@ class Flight:
       raise ValueError(f"Invalid Code in '{number}'")
     self._number = number
     
-  def number(self):
+  def num(self):
     return self._number
+
+class Aircraft:
+  def __init__(self, registration, model):
+      self._registration = registration
+      self._model = model
+
+  def registration(self):
+    return(self._registration)
+  
+
+x = Flight("SN0010009292992929")
+print(Flight.num(x))
+
