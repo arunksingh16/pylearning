@@ -15,10 +15,10 @@ def msgraph_auth():
     global accessToken
     global requestHeaders
     global tokenExpiry
-    tenantID = 'ceb41c7f-15aa-47b2-b4ec-19b9aec82c1a'
+    tenantID = 'xxxx-xxxx-xxxx-xxx-xxxx'
     authority = 'https://login.microsoftonline.com/' + tenantID
-    clientID = '696b01f7-6499-44f9-bdd5-91e94cf343a2'
-    clientSecret = 'Q7mYoFv-7lvC1C0XD3n_~Yg_Y_PwAtODHJ'
+    clientID = 'xxxx-xxxx-xxxx-xxx-xxxx'
+    clientSecret = 'xxxx-xxxx-xxxx-xxx-xxxx'
     scope = ['https://graph.microsoft.com/.default']
 
     app = msal.ConfidentialClientApplication(clientID, authority=authority, client_credential = clientSecret)
