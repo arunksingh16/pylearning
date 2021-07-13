@@ -1,8 +1,12 @@
 import os
 
-try:
-    user = os.environ['U1SER']
-    print(user)
-except KeyError as e:
-    print("Environment variable not set")
-    raise(e)
+
+def _env_var(ENVVARNAME):
+    try:
+        user = os.environ[ENVVARNAME]
+        return(user)
+    except KeyError as e:
+        print("Environment variable not set")
+        raise(e)
+
+print(_env_var('PATH'))
