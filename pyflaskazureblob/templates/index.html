@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h1>List of Azure Blob</h1>
+  <table>
+    <tr>
+      <th>Name of blobs</th>
+    </tr>
+    {% for your_list_element in your_list %}
+    <tr>
+    <td>{{ your_list_element }} <td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
