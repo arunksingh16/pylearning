@@ -6,7 +6,7 @@ from flask import Flask, render_template
 
 
 connect_str = os.getenv("AZURE_STORAGE_CONNECTION_STRING", "DefaultEndpointsProtocol=https;AccountName=yourSA;AccountKey=yourkey;EndpointSuffix=core.windows.net")
-container_name = os.getenv("AZURE_STORAGE_CONNECTION_STRING", "yourContainerName")
+container_name = os.getenv("AZURE_STORAGE_CONTAINER_NAME", "yourContainerName")
 app = Flask(__name__)
 
 def list_blob_in_container():
