@@ -1,0 +1,6 @@
+docker-compose.yml
+.git
+.cache
+kubernetes*.yaml
+README.md
+test.py

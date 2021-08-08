@@ -4,7 +4,8 @@ ENV SERVER_PORT="5000"
 ENV AZURE_STORAGE_CONTAINER_NAME="test"
 ENV AZURE_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;AccountName=yourSA;AccountKey=yourkey;EndpointSuffix=core.windows.net"
 EXPOSE 5000
-COPY . /app
+COPY .  /app/
 WORKDIR /app
 RUN pip install -r requirements.txt
+RUN apt-get update && apt-get install -y vim
 CMD ["python", "app.py"]

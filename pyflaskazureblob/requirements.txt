@@ -1,2 +1,5 @@
 flask
 azure-storage-blob
+flask_bcrypt
+flask_login
+email_validator

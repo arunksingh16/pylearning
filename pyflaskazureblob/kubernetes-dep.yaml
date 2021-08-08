@@ -1,0 +1,79 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azblob
+  labels:
+    app: python
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: python
+  template:
+    metadata:
+      labels:
+        app: python
+    spec:
+      containers:
+      - name: azblob
+        image: "singharunk/pyflaskazureblob:latest"
+        imagePullPolicy: "Always"
+        env:
+          - name: AZURE_STORAGE_CONTAINER_NAME
+            valueFrom:
+              secretKeyRef:
+                name: azcontainername
+                key: container
+          - name: AZURE_STORAGE_CONNECTION_STRING
+            valueFrom:
+              secretKeyRef:
+                name: azsaconnstr
+                key: connstring
+        ports:
+        - containerPort: 5000
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512m
+          requests:
+            cpu: 500m
+            memory: 512m
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: azblob-svc
+  labels:
+    app: python
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5000
+      protocol: TCP
+      name: http
+      targetPort: 5000
+  selector:
+    app: python
+---
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: azcontainername
+  labels:
+    app: python
+data:
+  container:  #base64 enc string
+---
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: azsaconnstr
+  labels:
+    app: python
+data:
+  connstring:  #base64 enc string
