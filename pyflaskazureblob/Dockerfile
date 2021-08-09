@@ -7,5 +7,5 @@ EXPOSE 5000
 COPY .  /app/
 WORKDIR /app
 RUN pip install -r requirements.txt
-RUN apt-get update && apt-get install -y vim
+RUN apt-get update && apt-get install -y vim && chmod -R 777 /opt
 CMD ["python", "app.py"]
