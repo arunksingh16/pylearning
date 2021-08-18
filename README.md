@@ -224,4 +224,6 @@ import modu
 x = modu.sqrt(4)  # sqrt is visibly part of modu's namespace
 ```
 
+### good projects for ref:
+https://github.com/postmanlabs/httpbin
 
