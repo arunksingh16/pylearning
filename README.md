@@ -1,3 +1,31 @@
+## Practises
+
+Use PEP8 code style guide for Python
+```
+pip install pep8
+python -m pep8 <py file>
+
+```
+
+`dir(object)` returns a list of attributesthat are accessible via the object
+`globals()` returns a dictionary of the attributescurrently in the global namespace, along with their values.
+`locals()` returns a dictionary of the attributes inthe current local namespace (e.g., within a function),along with their values.
+
+
+### pipenv
+Pipenv is a tool that provides all necessary means to create a virtual environment for your Python project. Pipenv also generates the Pipfile.lock file, which is used to produce deterministic builds and create a snapshot of your working environment. It also introduces two new files, the Pipfile (which is meant to replace requirements.txt) and the Pipfile.lock (which enables deterministic builds).
+
+`Pipenv uses pip and virtualenv under the hood but simplifies their usage with a single command line interface.`
+
+using pipenv
+```
+pip install --user pipenv
+python3.7 -m pipenv --python path\to\python
+python3.7 -m pipenv install --dev
+```
+### setup.py
+https://github.com/navdeep-G/setup.py
+
 
 ## PIP UPDATES
 
@@ -196,30 +224,4 @@ import modu
 x = modu.sqrt(4)  # sqrt is visibly part of modu's namespace
 ```
 
-
-## Practises
-
-Use PEP8 code style guide for Python
-```
-pip install pep8
-python -m pep8 <py file>
-
-```
-
-`dir(object)` returns a list of attributesthat are accessible via the object
-`globals()` returns a dictionary of the attributescurrently in the global namespace, along with their values.
-`locals()` returns a dictionary of the attributes inthe current local namespace (e.g., within a function),along with their values.
-
-
-### pipenv
-Pipenv is a tool that provides all necessary means to create a virtual environment for your Python project. Pipenv also generates the Pipfile.lock file, which is used to produce deterministic builds and create a snapshot of your working environment. It also introduces two new files, the Pipfile (which is meant to replace requirements.txt) and the Pipfile.lock (which enables deterministic builds).
-
-`Pipenv uses pip and virtualenv under the hood but simplifies their usage with a single command line interface.`
-
-using pipenv
-```
-pip install --user pipenv
-python3.7 -m pipenv --python path\to\python
-python3.7 -m pipenv install --dev
-```
 
