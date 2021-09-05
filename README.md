@@ -1,4 +1,4 @@
-## Practises
+## Python Tips
 
 Use PEP8 code style guide for Python
 ```
@@ -38,12 +38,12 @@ pip install <package_name> --upgrade
 pip install <package_name> --upgrade --user
 
 ```
-## PYTHON TIPS
+## Note
 
 - All functions return a value, if you dont specify then it is none. functions are first-class objects.
 - Mutable
 - Any directory with an __init__.py file is considered a Python package. A file modu.py in the directory pack/ is imported with thestatement import pack.modu.
-- 
+ 
 
 
 ## PYTHON EXAMPLES
@@ -223,6 +223,46 @@ import modu
 [...]
 x = modu.sqrt(4)  # sqrt is visibly part of modu's namespace
 ```
+
+
+### decorators
+Python decorators are mechanism to change or modify the behaviour of function or methods without changing any of its code. 
+
+```
+
+import time
+
+def func_f1(val1):
+    def wrapper():
+        a = time.time()
+        val1()
+        print("function took:", time.time() - a, "seconds")
+    return wrapper
+
+def run():
+    time.sleep(2)
+
+# without decorator
+func_f1(run)()
+
+@func_f1
+def quick():
+    time.sleep(2)
+
+# with decorator
+quick()
+
+```
+
+
+
+
+Note: 
+
+- Everything including Functions and classes are in Python is an object.
+- Decorators work with classes, methods as well
+- Every object is an instance of a class.
+
 
 ### good projects for ref:
 https://github.com/postmanlabs/httpbin
