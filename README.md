@@ -229,7 +229,7 @@ x = modu.sqrt(4)  # sqrt is visibly part of modu's namespace
 Python decorators are mechanism to change or modify the behaviour of function or methods without changing any of its code. 
 
 ```
-
+# following example will tell you how long a function takes to run
 import time
 
 def func_f1(val1):
