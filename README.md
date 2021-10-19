@@ -85,6 +85,21 @@ rawstring = r'Om\Namah:\Shivay'
 print(rawstring)
 ```
 
+Partition
+
+```
+>>> x,y,z = "Lon:Del".partition(':')
+>>> x
+'Lon'
+>>> y
+':'
+>>> z
+'Del'
+>>>
+
+```
+
+
 while loop:
 
 ```
