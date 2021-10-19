@@ -100,6 +100,19 @@ Partition
 ```
 
 
+range:
+
+```
+range(stop)
+range(start, stop)
+range(start, stop, step)
+
+
+```
+
+
+
+
 while loop:
 
 ```
@@ -217,7 +230,24 @@ createbanner(time.ctime(), "$")
 
 ```
 
-enumerate 
+enumerate:
+
+constructs an iterable of (index, value) tuple around another iterable object
+
+```
+>>> t = [7, 8, 6]
+
+>>> for i in enumerate(t):
+...     print(i)
+...
+(0, 7)
+(1, 8)
+(2, 6)
+>>>
+
+```
+ex 2 
+
 ```
 a = ["icky", "icky", "icky", "p-tang"]
 for i, item in enumerate(a):
