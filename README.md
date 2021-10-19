@@ -176,14 +176,25 @@ Hi this is utf8
 ```
 
 LIST:
+- 
 
 ```
 LST = [1,2,3]
 LST1 = []
+# slicing
+LST[1:3]
+LST[1:]
+
+>> LST = ["ARUN", "SAM", "TIPPU"]
+>> LST.index('ARUN')
+0
+>> "ARUN" in LST
+True
 ```
 
 DICT:
-
+- keys are immutable
+- values may be immutable
 ```
 DCT: {'KEY1': 'VAL1', 'KEY2':'VAL2'}
 DCT2 = {}
