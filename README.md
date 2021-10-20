@@ -34,7 +34,7 @@ python3.7 -m pipenv install --dev
 https://github.com/navdeep-G/setup.py
 
 
-## PIP UPDATES
+### PIP UPDATES
 
 ```
 pip list --outdated
@@ -45,7 +45,7 @@ pip install <package_name> --upgrade
 pip install <package_name> --upgrade --user
 
 ```
-## Note
+### Note
 
 - All functions return a value, if you dont specify then it is none. functions are first-class objects.
 - Mutable
@@ -53,7 +53,7 @@ pip install <package_name> --upgrade --user
  
 
 
-## PYTHON EXAMPLES
+### PYTHON EXAMPLES
 
 `Everything is an object in Python`
 
@@ -335,7 +335,60 @@ finally:
  # always execute
 ```
 
+### Set Algebra
+Python set can support powerful algebra options
+```
+# sets are define
+A = {0, 2, 4, 6, 8};
+B = {1, 2, 3, 4, 5};
+  
+# union
+print("Union :", A | B)
+  
+# intersection
+print("Intersection :", A & B)
+  
+# difference
+print("Difference :", A - B)
+  
+# symmetric difference
+print("Symmetric difference :", A ^ B)
+```
+### Python protocols 
+Python Built in collection can be organised in protocols
+```
+Protocol
 
+Implementing collections
+
+Container
+
+str, list, dict, range, tuple, set, bytes
+
+Sized
+
+str, list, dict, range, tuple, set, bytes
+
+Iterable
+
+str, list, dict, range, tuple, set, bytes
+
+Sequence
+
+str, list, tuple, range, bytes
+
+Mutable Sequence
+
+list
+
+Mutable Set
+
+set
+
+Mutable Mapping
+
+dict
+```
 
 Note: 
 
