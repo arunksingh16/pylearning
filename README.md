@@ -19,6 +19,11 @@ print(sys.version_info)
 print(sys.version)
 ```
 
+### Logging Levels
+
+https://docs.python.org/3/library/logging.html#logging-levels
+
+
 ### pipenv
 Pipenv is a tool that provides all necessary means to create a virtual environment for your Python project. Pipenv also generates the Pipfile.lock file, which is used to produce deterministic builds and create a snapshot of your working environment. It also introduces two new files, the Pipfile (which is meant to replace requirements.txt) and the Pipfile.lock (which enables deterministic builds).
 
