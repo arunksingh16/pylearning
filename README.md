@@ -56,9 +56,45 @@ pipenv shell
 pipenv install requests
 # This command will install the latest version of requests and update the Pipfile to target this version.
 ```
+- Install all from pipfile
+```
+pipenv install
+```
+
 - Development only
 ```
 pipenv install --dev pytest
+```
+
+- Uninstall 
+```
+pipenv uninstall --all
+pipenv uninstall --all-dev
+```
+
+- Take ref from requirements.txt
+```
+pipenv install -r requirements.txt
+```
+- Graph
+```
+pipenv graph
+```
+- Lock 
+```
+pipenv lock
+```
+- Executing in prd
+```
+pipenv install --ignore-pipfile
+```
+- Remove VEnv
+```
+pipenv --rm
+```
+- VEnv location
+```
+pipenv --venv
 ```
 
 
