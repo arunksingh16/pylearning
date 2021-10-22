@@ -28,13 +28,40 @@ https://docs.python.org/3/library/logging.html#logging-levels
 Pipenv is a tool that provides all necessary means to create a virtual environment for your Python project. Pipenv also generates the Pipfile.lock file, which is used to produce deterministic builds and create a snapshot of your working environment. It also introduces two new files, the Pipfile (which is meant to replace requirements.txt) and the Pipfile.lock (which enables deterministic builds).
 
 `Pipenv uses pip and virtualenv under the hood but simplifies their usage with a single command line interface.`
+- pipenv keeps all virtual environment files in ~/.virtualenvs
+- pipenv keeps track of what’s been installed in the file Pipfile.lock
 
-using pipenv
+
+#### using pipenv
+
+- Install
+
 ```
 pip install --user pipenv
 python3.7 -m pipenv --python path\to\python
 python3.7 -m pipenv install --dev
 ```
+
+- Initialise pipenv
+```
+pipenv --python 3.9.7
+```
+
+- Activate It
+```
+pipenv shell
+```
+- Install a package
+```
+pipenv install requests
+# This command will install the latest version of requests and update the Pipfile to target this version.
+```
+- Development only
+```
+pipenv install --dev pytest
+```
+
+
 ### setup.py
 https://github.com/navdeep-G/setup.py
 
